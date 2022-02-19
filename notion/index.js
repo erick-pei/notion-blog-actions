@@ -12247,6 +12247,8 @@ class notion {
       "urlname",
       "show_category",
       "index_img",
+      "created_time",
+      "updated_time"
     ];
     let pattern = `(${keys.join("|")}):\\s(.*)\n`;
     let re = new RegExp(pattern, "igm");
