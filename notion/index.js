@@ -12283,6 +12283,7 @@ class notion {
    * @param {*} page
    */
   async updateProps(page) {
+    console.log("out page >>> ", page);
     let props = page.properties;
     props.status.select = { name: "已发布" };
     await this.client.pages.update({
