@@ -12283,9 +12283,12 @@ class notion {
    * @param {*} page
    */
   async updateProps(page) {
-    console.log("out page >>> ", page);
+    console.log("out page1 >>> ", page);
     let props = page.properties;
     props.status.select = { name: "已发布" };
+    delete props.created_time;
+    delete props.updated_time;
+    console.log("out page2 >>> ", page);
     await this.client.pages.update({
       page_id: page.id,
       properties: props,
